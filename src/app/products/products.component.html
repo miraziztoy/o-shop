@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-3">
+    <product-filter [category]="category"></product-filter>
+  </div>
+  <div class="col">
+    <div class="row">
+      <ng-container *ngFor="let p of filteredPods; let i = index">
+        <div class="col">
+          <product-cart [product]="p"></product-cart>
+        </div>
+        <div class="w-100" *ngIf="(i + 1) % 2 == 0"></div> 
+      </ng-container>
+    </div>        
+  </div>
+</div>
+
+
+
+
+
